@@ -414,7 +414,9 @@ function App() {
           <div className="pricing-cards-container">
             <div className="pricing-card growing">
               <div className="card-header">
-                <div className="card-icon growing-icon"></div>
+                <div className="modern-icon growing-icon">
+                  <div className="icon-shape"></div>
+                </div>
                 <h3>Growing</h3>
               </div>
               
@@ -450,7 +452,9 @@ function App() {
 
             <div className="pricing-card scaling">
               <div className="card-header">
-                <div className="card-icon scaling-icon"></div>
+                <div className="modern-icon scaling-icon">
+                  <div className="icon-shape"></div>
+                </div>
                 <h3>Scaling</h3>
               </div>
               
@@ -483,7 +487,9 @@ function App() {
 
             <div className="pricing-card enterprise">
               <div className="card-header">
-                <div className="card-icon enterprise-icon"></div>
+                <div className="modern-icon enterprise-icon">
+                  <div className="icon-shape"></div>
+                </div>
                 <h3>Enterprise</h3>
               </div>
               
