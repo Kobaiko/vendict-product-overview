@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 import './App.css';
 import vendictLogo from './assets/vendict_logo_white.png';
 import scaleVideo from './assets/scale.webm';
@@ -19,123 +17,7 @@ function App() {
     }
   };
 
-  const downloadAsPDF = async () => {
-    const button = document.querySelector('.pdf-download-btn');
-    const originalText = button.textContent;
-    
-    try {
-      button.textContent = 'Generating PDF...';
-      button.disabled = true;
 
-      // Get the main content element
-      const element = document.querySelector('.main-content');
-      
-      // Hide sidebar temporarily for clean PDF
-      const sidebar = document.querySelector('.sidebar');
-      const originalSidebarDisplay = sidebar.style.display;
-      sidebar.style.display = 'none';
-      
-      // Temporarily adjust main content for full width
-      const originalMainContentStyle = element.style.marginLeft;
-      element.style.marginLeft = '0';
-      element.style.width = '100%';
-      
-      // Wait for layout to settle
-      await new Promise(resolve => setTimeout(resolve, 100));
-
-      // Capture the content with high quality
-      const canvas = await html2canvas(element, {
-        scale: 3, // Higher scale for better quality
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-        width: element.scrollWidth,
-        height: element.scrollHeight,
-        scrollX: 0,
-        scrollY: 0,
-        windowWidth: 1200, // Fixed width for consistency
-        windowHeight: element.scrollHeight,
-        onclone: (clonedDoc) => {
-          // Ensure all styles are preserved in the clone
-          const clonedElement = clonedDoc.querySelector('.main-content');
-          if (clonedElement) {
-            clonedElement.style.marginLeft = '0';
-            clonedElement.style.width = '100%';
-            clonedElement.style.maxWidth = 'none';
-          }
-        }
-      });
-
-      // Restore original layout
-      sidebar.style.display = originalSidebarDisplay;
-      element.style.marginLeft = originalMainContentStyle;
-      element.style.width = '';
-
-      // Create PDF with proper dimensions
-      const imgData = canvas.toDataURL('image/png', 1.0);
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'mm',
-        format: 'a4'
-      });
-
-      // Calculate dimensions to fit content properly
-      const pageWidth = pdf.internal.pageSize.getWidth();
-      const pageHeight = pdf.internal.pageSize.getHeight();
-      const margin = 10;
-      const availableWidth = pageWidth - (2 * margin);
-      
-      const imgWidth = availableWidth;
-      const imgHeight = (canvas.height * availableWidth) / canvas.width;
-      
-      // If content is taller than one page, split it
-      if (imgHeight > pageHeight - (2 * margin)) {
-        const totalPages = Math.ceil(imgHeight / (pageHeight - (2 * margin)));
-        
-        for (let i = 0; i < totalPages; i++) {
-          if (i > 0) pdf.addPage();
-          
-          const sourceY = i * (pageHeight - (2 * margin)) * (canvas.height / imgHeight);
-          const sourceHeight = Math.min(
-            (pageHeight - (2 * margin)) * (canvas.height / imgHeight),
-            canvas.height - sourceY
-          );
-          
-          // Create a temporary canvas for this page section
-          const pageCanvas = document.createElement('canvas');
-          pageCanvas.width = canvas.width;
-          pageCanvas.height = sourceHeight;
-          const pageCtx = pageCanvas.getContext('2d');
-          
-          pageCtx.drawImage(
-            canvas,
-            0, sourceY, canvas.width, sourceHeight,
-            0, 0, canvas.width, sourceHeight
-          );
-          
-          const pageImgData = pageCanvas.toDataURL('image/png', 1.0);
-          const pageImgHeight = (sourceHeight * availableWidth) / canvas.width;
-          
-          pdf.addImage(pageImgData, 'PNG', margin, margin, imgWidth, pageImgHeight);
-        }
-      } else {
-        // Single page
-        pdf.addImage(imgData, 'PNG', margin, margin, imgWidth, imgHeight);
-      }
-
-      // Save the PDF
-      pdf.save('vendict-product-overview.pdf');
-
-    } catch (error) {
-      console.error('PDF generation failed:', error);
-      alert('PDF generation failed. Please try again.');
-    } finally {
-      // Reset button state
-      button.textContent = originalText;
-      button.disabled = false;
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -231,13 +113,6 @@ function App() {
             Pricing
           </button>
         </div>
-
-        <button 
-          className="pdf-download-btn"
-          onClick={downloadAsPDF}
-        >
-          📄 Download this as PDF
-        </button>
 
         <button 
           className="cta-button"
