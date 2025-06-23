@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import html2pdf from 'html2pdf.js';
 import './App.css';
 import vendictLogo from './assets/vendict_logo_white.png';
 import scaleVideo from './assets/scale.webm';
@@ -15,6 +16,48 @@ function App() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const downloadAsPDF = () => {
+    // Get the main content element (excluding sidebar)
+    const element = document.querySelector('.main-content');
+    
+    const opt = {
+      margin: [0.5, 0.5, 0.5, 0.5],
+      filename: 'vendict-product-overview.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { 
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: '#ffffff',
+        logging: false,
+        width: element.scrollWidth,
+        height: element.scrollHeight
+      },
+      jsPDF: { 
+        unit: 'in', 
+        format: 'a4', 
+        orientation: 'portrait' 
+      }
+    };
+
+    // Show loading state
+    const button = document.querySelector('.pdf-download-btn');
+    const originalText = button.textContent;
+    button.textContent = 'Generating PDF...';
+    button.disabled = true;
+
+    html2pdf().set(opt).from(element).save().then(() => {
+      // Reset button state
+      button.textContent = originalText;
+      button.disabled = false;
+    }).catch((error) => {
+      console.error('PDF generation failed:', error);
+      button.textContent = originalText;
+      button.disabled = false;
+      alert('PDF generation failed. Please try again.');
+    });
   };
 
   useEffect(() => {
@@ -111,6 +154,13 @@ function App() {
             Pricing
           </button>
         </div>
+
+        <button 
+          className="pdf-download-btn"
+          onClick={downloadAsPDF}
+        >
+          📄 Download this as PDF
+        </button>
 
         <button 
           className="cta-button"

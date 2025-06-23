@@ -110,6 +110,37 @@ body {
 .nav-item:nth-child(2) .nav-number { background: #4285f4; color: white; }
 .nav-item:nth-child(3) .nav-number { background: #ff9800; color: white; }
 
+.pdf-download-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pdf-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
+}
+
+.pdf-download-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 .cta-button {
   width: 100%;
   padding: 15px 20px;
@@ -120,7 +151,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .cta-button:hover {
