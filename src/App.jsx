@@ -20,13 +20,15 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['intro', 'grc-mentor', 'questionnaire', 'frameworks', 'risk', 'trust', 'success-stories', 'pricing'];
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 200;
 
-      for (const section of sections) {
+      // Check from bottom to top to prioritize lower sections
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         const element = document.getElementById(section);
         if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          const { offsetTop } = element;
+          if (scrollPosition >= offsetTop) {
             setActiveSection(section);
             break;
           }

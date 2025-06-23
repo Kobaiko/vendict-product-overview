@@ -233,118 +233,118 @@ body {
 }
 
 .grc-section {
-  background: linear-gradient(135deg, #4285f4 0%, #1565c0 100%);
+  background: #000000;
   color: white;
 }
 
-/* Questionnaire Section - Orange Theme */
+/* Questionnaire Section - Soft Orange Theme */
 #questionnaire {
-  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
-  color: white;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  color: #333;
 }
 
 #questionnaire h2,
 #questionnaire h3,
 #questionnaire h4 {
-  color: white;
+  color: #e65100;
 }
 
 #questionnaire p,
 #questionnaire li {
-  color: rgba(255, 255, 255, 0.9);
+  color: #555;
 }
 
 #questionnaire .section-subtitle {
-  color: #fff3e0;
+  color: #ff9800;
 }
 
 #questionnaire .text-content h4 {
-  color: #fff3e0;
+  color: #ff9800;
 }
 
-/* Frameworks Section - Purple Theme */
+/* Frameworks Section - Soft Purple Theme */
 #frameworks {
-  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
-  color: white;
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  color: #333;
 }
 
 #frameworks h2,
 #frameworks h3,
 #frameworks h4 {
-  color: white;
+  color: #6a1b9a;
 }
 
 #frameworks p,
 #frameworks li {
-  color: rgba(255, 255, 255, 0.9);
+  color: #555;
 }
 
 #frameworks .section-subtitle {
-  color: #f3e5f5;
+  color: #9c27b0;
 }
 
 #frameworks .text-content h4 {
-  color: #f3e5f5;
+  color: #9c27b0;
 }
 
-/* Risk Management Section - Cyan Theme */
+/* Risk Management Section - Soft Cyan Theme */
 #risk {
-  background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
-  color: white;
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  color: #333;
 }
 
 #risk h2,
 #risk h3,
 #risk h4 {
-  color: white;
+  color: #00695c;
 }
 
 #risk p,
 #risk li {
-  color: rgba(255, 255, 255, 0.9);
+  color: #555;
 }
 
 #risk .section-subtitle {
-  color: #e0f7fa;
+  color: #00bcd4;
 }
 
 #risk .text-content h4 {
-  color: #e0f7fa;
+  color: #00bcd4;
 }
 
-/* Trust Center Section - Green Theme */
+/* Trust Center Section - Soft Green Theme */
 #trust {
-  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
-  color: white;
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  color: #333;
 }
 
 #trust h2,
 #trust h3,
 #trust h4 {
-  color: white;
+  color: #2e7d32;
 }
 
 #trust p,
 #trust li {
-  color: rgba(255, 255, 255, 0.9);
+  color: #555;
 }
 
 #trust .section-subtitle {
-  color: #e8f5e8;
+  color: #4caf50;
 }
 
 #trust .text-content h4 {
-  color: #e8f5e8;
+  color: #4caf50;
 }
 
-/* Success Stories Section - Red Theme */
+/* Success Stories Section - Soft Blue Theme */
 .success-stories-section {
-  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
-  color: white;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333;
 }
 
 .success-stories-section h2 {
-  color: white;
+  color: #1565c0;
 }
 
 .grc-section h2,
@@ -458,22 +458,20 @@ body {
 .take-closer-look-btn {
   display: inline-block;
   padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #6366f1;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   margin-top: 24px;
   transition: all 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
 }
 
 .take-closer-look-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #5855eb;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
 /* Success Stories */
@@ -500,13 +498,12 @@ body {
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: white;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card:hover {
