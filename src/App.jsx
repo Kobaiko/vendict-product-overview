@@ -413,24 +413,38 @@ function App() {
           
           <div className="pricing-cards-container">
             <div className="pricing-card growing">
+              <div className="card-icon-overlay">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="floating-icon">
+                  <path d="M12 20C12 15.5817 15.5817 12 20 12H60C64.4183 12 68 15.5817 68 20V60C68 64.4183 64.4183 68 60 68H20C15.5817 68 12 64.4183 12 60V20Z" fill="url(#growing-gradient)" transform="rotate(15 40 40)"/>
+                  <defs>
+                    <linearGradient id="growing-gradient" x1="12" y1="12" x2="68" y2="68" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#fb923c"/>
+                      <stop offset="1" stopColor="#f97316"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
               <div className="card-header">
-                <div className="modern-icon growing-icon">
-                  <div className="icon-shape"></div>
-                </div>
                 <h3>Growing</h3>
               </div>
               
               <div className="pricing-metrics">
-                <div className="metric-row">
-                  <span className="metric-number">5</span>
+                <div className="metric-item">
+                  <div className="metric-icon growing-metric">
+                    <span className="metric-number">5</span>
+                  </div>
                   <span className="metric-label">Questionnaires per month</span>
                 </div>
-                <div className="metric-row">
-                  <span className="metric-number">3</span>
+                <div className="metric-item">
+                  <div className="metric-icon growing-metric">
+                    <span className="metric-number">3</span>
+                  </div>
                   <span className="metric-label">Seats</span>
                 </div>
-                <div className="metric-row">
-                  <span className="metric-number">1</span>
+                <div className="metric-item">
+                  <div className="metric-icon growing-metric">
+                    <span className="metric-number">1</span>
+                  </div>
                   <span className="metric-label">Product Library</span>
                 </div>
               </div>
@@ -451,24 +465,43 @@ function App() {
             </div>
 
             <div className="pricing-card scaling">
+              <div className="card-icon-overlay">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="floating-icon">
+                  <path d="M20 12C17.7909 12 16 13.7909 16 16V60C16 62.2091 17.7909 64 20 64H60C62.2091 64 64 62.2091 64 60V16C64 13.7909 62.2091 12 60 12H20Z" fill="url(#scaling-gradient)"/>
+                  <path d="M32 24C29.7909 24 28 25.7909 28 28V44C28 46.2091 29.7909 48 32 48H48C50.2091 48 52 46.2091 52 44V28C52 25.7909 50.2091 24 48 24H32Z" fill="url(#scaling-gradient-inner)"/>
+                  <defs>
+                    <linearGradient id="scaling-gradient" x1="16" y1="12" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#8b5cf6"/>
+                      <stop offset="1" stopColor="#7c3aed"/>
+                    </linearGradient>
+                    <linearGradient id="scaling-gradient-inner" x1="28" y1="24" x2="52" y2="48" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#a855f7"/>
+                      <stop offset="1" stopColor="#9333ea"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
               <div className="card-header">
-                <div className="modern-icon scaling-icon">
-                  <div className="icon-shape"></div>
-                </div>
                 <h3>Scaling</h3>
               </div>
               
               <div className="pricing-metrics">
-                <div className="metric-row">
-                  <span className="metric-number">15</span>
+                <div className="metric-item">
+                  <div className="metric-icon scaling-metric">
+                    <span className="metric-number">15</span>
+                  </div>
                   <span className="metric-label">Questionnaires per month</span>
                 </div>
-                <div className="metric-row">
-                  <span className="metric-number">10</span>
+                <div className="metric-item">
+                  <div className="metric-icon scaling-metric">
+                    <span className="metric-number">10</span>
+                  </div>
                   <span className="metric-label">Seats</span>
                 </div>
-                <div className="metric-row">
-                  <span className="metric-number">3</span>
+                <div className="metric-item">
+                  <div className="metric-icon scaling-metric">
+                    <span className="metric-number">3</span>
+                  </div>
                   <span className="metric-label">Product Libraries</span>
                 </div>
               </div>
@@ -486,24 +519,43 @@ function App() {
             </div>
 
             <div className="pricing-card enterprise">
+              <div className="card-icon-overlay">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="floating-icon">
+                  <path d="M12 32C12 29.7909 13.7909 28 16 28H60C62.2091 28 64 29.7909 64 32V60C64 62.2091 62.2091 64 60 64H16C13.7909 64 12 62.2091 12 60V32Z" fill="url(#enterprise-gradient)"/>
+                  <path d="M32 16C29.7909 16 28 17.7909 28 20V44C28 46.2091 29.7909 48 32 48H60C62.2091 48 64 46.2091 64 44V20C64 17.7909 62.2091 16 60 16H32Z" fill="url(#enterprise-gradient-2)"/>
+                  <defs>
+                    <linearGradient id="enterprise-gradient" x1="12" y1="28" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#06b6d4"/>
+                      <stop offset="1" stopColor="#0891b2"/>
+                    </linearGradient>
+                    <linearGradient id="enterprise-gradient-2" x1="28" y1="16" x2="64" y2="48" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#22d3ee"/>
+                      <stop offset="1" stopColor="#06b6d4"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
               <div className="card-header">
-                <div className="modern-icon enterprise-icon">
-                  <div className="icon-shape"></div>
-                </div>
                 <h3>Enterprise</h3>
               </div>
               
               <div className="pricing-metrics">
-                <div className="metric-row">
-                  <span className="metric-number">25+</span>
+                <div className="metric-item">
+                  <div className="metric-icon enterprise-metric">
+                    <span className="metric-number">25+</span>
+                  </div>
                   <span className="metric-label">Questionnaires per month</span>
                 </div>
-                <div className="metric-row">
-                  <span className="metric-number">20+</span>
+                <div className="metric-item">
+                  <div className="metric-icon enterprise-metric">
+                    <span className="metric-number">20+</span>
+                  </div>
                   <span className="metric-label">Seats</span>
                 </div>
-                <div className="metric-row">
-                  <span className="metric-number">5+</span>
+                <div className="metric-item">
+                  <div className="metric-icon enterprise-metric">
+                    <span className="metric-number">5+</span>
+                  </div>
                   <span className="metric-label">Product Libraries</span>
                 </div>
               </div>
