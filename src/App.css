@@ -477,8 +477,8 @@ body {
 /* Success Stories */
 .success-stories-section {
   padding: 80px 40px;
-  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
-  color: white;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333;
 }
 
 .success-stories-section h2 {
@@ -486,7 +486,7 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
-  color: white;
+  color: #1565c0;
 }
 
 .testimonials-grid {
@@ -800,5 +800,74 @@ body {
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Pricing Footer */
+.pricing-footer {
+  margin-top: 80px;
+  padding: 60px 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  animation: footerGradient 10s ease-in-out infinite;
+}
+
+@keyframes footerGradient {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer-content p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.footer-cta-button {
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.footer-cta-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 

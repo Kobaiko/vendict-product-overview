@@ -572,6 +572,20 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Call to Action Footer */}
+          <div className="pricing-footer">
+            <div className="footer-content">
+              <h3>Ready to transform your compliance process?</h3>
+              <p>Join hundreds of companies who trust Vendict for zero-hallucination AI compliance automation.</p>
+              <button 
+                className="footer-cta-button"
+                onClick={() => window.open('https://vendict.com/book-a-demo', '_blank')}
+              >
+                Continue the conversation
+              </button>
+            </div>
+          </div>
         </section>
       </div>
     </div>
