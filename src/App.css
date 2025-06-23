@@ -233,7 +233,117 @@ body {
 }
 
 .grc-section {
-  background: #000000;
+  background: linear-gradient(135deg, #4285f4 0%, #1565c0 100%);
+  color: white;
+}
+
+/* Questionnaire Section - Orange Theme */
+#questionnaire {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+}
+
+#questionnaire h2,
+#questionnaire h3,
+#questionnaire h4 {
+  color: white;
+}
+
+#questionnaire p,
+#questionnaire li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#questionnaire .section-subtitle {
+  color: #fff3e0;
+}
+
+#questionnaire .text-content h4 {
+  color: #fff3e0;
+}
+
+/* Frameworks Section - Purple Theme */
+#frameworks {
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+}
+
+#frameworks h2,
+#frameworks h3,
+#frameworks h4 {
+  color: white;
+}
+
+#frameworks p,
+#frameworks li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#frameworks .section-subtitle {
+  color: #f3e5f5;
+}
+
+#frameworks .text-content h4 {
+  color: #f3e5f5;
+}
+
+/* Risk Management Section - Cyan Theme */
+#risk {
+  background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+  color: white;
+}
+
+#risk h2,
+#risk h3,
+#risk h4 {
+  color: white;
+}
+
+#risk p,
+#risk li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#risk .section-subtitle {
+  color: #e0f7fa;
+}
+
+#risk .text-content h4 {
+  color: #e0f7fa;
+}
+
+/* Trust Center Section - Green Theme */
+#trust {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+}
+
+#trust h2,
+#trust h3,
+#trust h4 {
+  color: white;
+}
+
+#trust p,
+#trust li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#trust .section-subtitle {
+  color: #e8f5e8;
+}
+
+#trust .text-content h4 {
+  color: #e8f5e8;
+}
+
+/* Success Stories Section - Red Theme */
+.success-stories-section {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
+}
+
+.success-stories-section h2 {
   color: white;
 }
 
@@ -348,25 +458,29 @@ body {
 .take-closer-look-btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #6366f1;
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   margin-top: 24px;
   transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .take-closer-look-btn:hover {
-  background: #5855eb;
+  background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Success Stories */
 .success-stories-section {
   padding: 80px 40px;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
 }
 
 .success-stories-section h2 {
@@ -374,7 +488,7 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
-  color: #333;
+  color: white;
 }
 
 .testimonials-grid {
@@ -386,11 +500,13 @@ body {
 }
 
 .testimonial-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .testimonial-card:hover {
@@ -434,7 +550,7 @@ body {
 
 /* Pricing Section */
 .pricing-section {
-  padding: 80px 40px;
+  padding: 80px 40px 200px 40px;
   background: #f8fafc;
 }
 
