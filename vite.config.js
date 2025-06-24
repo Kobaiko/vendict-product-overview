@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vendictpage/',
+  base: '/vendict-product-overview/',
   plugins: [react(),tailwindcss()],
   resolve: {
     alias: {
